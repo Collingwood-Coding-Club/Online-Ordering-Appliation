@@ -1,7 +1,7 @@
 <script lang="ts">
     import type { Product } from "$lib/server/database/products/schema";
     import type { PageData } from "./$types";
-    import CartItem from "$lib/components/Item.svelte";
+    import Item from "$lib/components/Item.svelte";
 
     export let data: PageData;
     let items = data.items;
@@ -28,7 +28,7 @@
             <h2 class="text-xl font-semibold">Cart</h2>
             <ul>
                 {#each cart as item, index}
-                    <CartItem item={item} on:delete={() => cart = cart.filter((_, i) => i !== index)} />
+                    <Item item={item} on:delete={() => cart = cart.filter((_, i) => i !== index)} />
                 {/each}
             </ul>
             <p class="text-lg font-bold">Total: ${cart.reduce((acc, item) => acc + item.price, 0) / 100}</p>
