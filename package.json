@@ -42,8 +42,11 @@
         "@planetscale/database": "^1.13.0",
         "@trpc/client": "^10.45.0",
         "@trpc/server": "^10.45.0",
-        "dotenv": "^16.4.1",
+        "@types/node": "^20.11.20",
+        "dotenv": "^16.4.5",
         "drizzle-orm": "^0.29.3",
+        "mysql2": "^3.9.1",
+        "nanoid": "^5.0.6",
         "trpc-sveltekit": "^3.5.22"
     }
 }
